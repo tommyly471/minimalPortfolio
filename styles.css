@@ -11,74 +11,78 @@ body {
     background-color: #ffffff;
     color: #333;
     scroll-behavior: smooth;
-    padding: 0 20px; /* Add padding for consistent left and right spacing */
+    padding: 0 20px;
 }
 
-/* Header styling */
+/* Centered container styling */
+.container {
+    max-width: 1200px; /* Limit the width for consistent alignment */
+    margin: 0 auto;
+    padding: 0 20px; /* Optional padding for spacing */
+}
+
+/* Header and nav styling */
 header {
-    position: fixed;
     width: 100%;
     background: #fff;
     padding: 15px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 10;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 5%;
-}
-
-nav ul li {
-    flex: 1;
+    width: 100%; /* Ensure nav fills container width */
+    padding: 0 1.25%;
 }
 
 nav ul li:nth-child(1) {
+    flex-basis: 34.25%; /* First item takes 50% of the space */
     text-align: left;
 }
 
-nav ul li:nth-child(2),
-nav ul li:nth-child(3) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 nav ul li:nth-child(2) {
-    margin-left: 40%;
+    flex-basis: 34.25%; /* Second item takes 30% of the space */
+    text-align: left;
 }
 
 nav ul li:nth-child(3) {
-    margin-left: 30%;
+    flex-basis: 10%; /* Third item takes 20% of the space */
+    text-align: left;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-    transition: color 0.3s ease;
+    font-size: 1.2em;
     white-space: nowrap;
 }
 
-/* Section styling */
-.content-section {
-    padding: 100px 0 60px;
-    max-width: 800px; /* Set a max width for a smaller layout */
-    margin: 80px auto 20px; /* Center align with auto margin */
-    text-align: left; /* Align text to the left */
+
+/* Top sections styling */
+.top-sections {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
 }
 
-.content-section h2 {
-    font-size: 1.8em;
+.top-sections section {
+    flex: 1;
+    padding: 0 15px;
+    min-width: 250px;
+}
+
+.top-sections h2 {
+    font-size: 1.2em;
     margin-bottom: 10px;
 }
 
-.content-section p {
-    font-size: 1em;
-    line-height: 1.5;
+.top-sections p {
+    font-size: 0.9em;
+    line-height: 1.4;
     color: #555;
 }
 
@@ -97,13 +101,12 @@ footer {
         align-items: center;
     }
 
-    nav ul li {
-        margin-left: 0;
-        text-align: center;
+    .top-sections {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .content-section {
-        padding: 60px 20px;
-        margin-top: 100px;
+    .top-sections section {
+        padding: 10px 0;
     }
 }
