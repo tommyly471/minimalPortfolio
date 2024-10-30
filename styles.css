@@ -60,7 +60,6 @@ nav ul li a {
     white-space: nowrap;
 }
 
-
 /* Top sections styling */
 .top-sections {
     display: flex;
@@ -108,5 +107,67 @@ footer {
 
     .top-sections section {
         padding: 10px 0;
+    }
+}
+
+/* Project Card Layout */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.project-card {
+    width: 300px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #0073e6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.project-link:hover {
+    background-color: #005bb5;
+}
+
+/* Responsive Design for Project Cards */
+@media (max-width: 900px) {
+    .project-card {
+        width: 45%; /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .project-card {
+        width: 100%; /* Stack cards on very small screens */
     }
 }
