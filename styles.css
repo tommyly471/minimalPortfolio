@@ -114,12 +114,13 @@ footer {
 .project-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between; /* Distribute space between items */
     padding: 20px;
 }
 
 .project-card {
-    width: 300px;
+    flex: 1 1 30%; /* Each card takes up 30% of the row, allowing 3 per row */
+    max-width: 30%; /* Ensure cards don't exceed 30% width */
     margin: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
@@ -159,15 +160,17 @@ footer {
     background-color: #005bb5;
 }
 
-/* Responsive Design for Project Cards */
+/* Responsive Design Adjustments */
 @media (max-width: 900px) {
     .project-card {
-        width: 45%; /* Adjust for smaller screens */
+        flex: 1 1 45%; /* Adjust to two cards per row on medium screens */
+        max-width: 45%;
     }
 }
 
 @media (max-width: 600px) {
     .project-card {
-        width: 100%; /* Stack cards on very small screens */
+        flex: 1 1 100%; /* Stack cards on small screens */
+        max-width: 100%;
     }
 }
