@@ -11,12 +11,12 @@ body {
     background-color: #ffffff;
     color: #333;
     scroll-behavior: smooth;
-    padding: 0 20px;
+    padding: 0 300px;
 }
 
 /* Centered container styling */
 .container {
-    max-width: 1200px; /* Limit the width for consistent alignment */
+    max-width: 2000px; /* Limit the width for consistent alignment */
     margin: 0 auto;
     padding: 0 20px; /* Optional padding for spacing */
 }
@@ -34,7 +34,7 @@ nav ul {
     display: flex;
     align-items: center;
     width: 100%; /* Ensure nav fills container width */
-    padding: 0 1.25%;
+    padding: 0 0.75%;
 }
 
 nav ul li:nth-child(1) {
