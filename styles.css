@@ -11,7 +11,6 @@ body {
     background-color: #ffffff;
     color: #333;
     scroll-behavior: smooth;
-    padding: 0 300px;
 }
 
 /* Centered container styling */
@@ -32,24 +31,15 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    align-items: center;
-    width: 100%; /* Ensure nav fills container width */
+    align-items: flex-start;
+    width: 100%;
+    justify-content: flex-start; /* Ensures equal spacing between items */
     padding: 0 0.75%;
 }
 
-nav ul li:nth-child(1) {
-    flex-basis: 34.25%; /* First item takes 50% of the space */
-    text-align: left;
-}
-
-nav ul li:nth-child(2) {
-    flex-basis: 34.25%; /* Second item takes 30% of the space */
-    text-align: left;
-}
-
-nav ul li:nth-child(3) {
-    flex-basis: 10%; /* Third item takes 20% of the space */
-    text-align: left;
+nav ul li {
+    flex: 1;
+    text-align: center;
 }
 
 nav ul li a {
@@ -66,17 +56,19 @@ nav ul li a {
     justify-content: space-between;
     padding: 20px 0;
     border-top: 1px solid #ddd;
+    gap: 15px; /* Adds space between sections */
 }
 
 .top-sections section {
     flex: 1;
-    padding: 0 15px;
     min-width: 250px;
+    padding: 10px 15px; /* Padding to help with responsive alignment */
 }
 
 .top-sections h2 {
     font-size: 1.2em;
     margin-bottom: 10px;
+    text-align: left;
 }
 
 .top-sections p {
@@ -95,6 +87,10 @@ footer {
 
 /* Responsive styling */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 10px; /* Reduce padding for smaller screens */
+    }
+    
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -107,6 +103,7 @@ footer {
 
     .top-sections section {
         padding: 10px 0;
+        width: 100%; /* Full width for smaller screens */
     }
 }
 
@@ -120,7 +117,7 @@ footer {
 
 .project-card-wrapper {
     flex: 1 1 calc(33.333% - 20px); /* Three cards per row on large screens */
-    max-width: calc(33.333% - 20px); /* Ensures cards stay within 1/3 of the container width */
+    max-width: calc(33.333% - 20px);
     margin: 10px;
     text-align: center;
 }
@@ -145,6 +142,7 @@ footer {
 
 .project-subtitles {
     padding: 10px 0;
+    text-align: left;
 }
 
 .project-subtitle {
