@@ -34,7 +34,8 @@ nav ul {
     align-items: flex-start;
     width: 100%;
     justify-content: flex-start; /* Ensures equal spacing between items */
-    padding: 0 0.75%;
+    padding-left: 0; /* Remove default padding */
+    margin-left: -10px;
 }
 
 nav ul li {
@@ -107,61 +108,42 @@ footer {
     }
 }
 
-/* Project Card Layout */
+/* Ensure projects align with other sections */
+.projects {
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+.projects h2 {
+    text-align: left;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
 .project-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
+    gap: 20px; /* Adds consistent spacing between project cards */
 }
 
 .project-card-wrapper {
     flex: 1 1 calc(33.333% - 20px); /* Three cards per row on large screens */
     max-width: calc(33.333% - 20px);
-    margin: 10px;
+    margin: 0 auto;
     text-align: center;
 }
 
-.project-card {
-    display: block;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
-}
-
-.project-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.project-subtitles {
-    padding: 10px 0;
-    text-align: left;
-}
-
-.project-subtitle {
-    font-size: 0.9em;
-    color: #666;
-    margin: 5px 0;
-}
-
-/* Responsive Design Adjustments */
+/* Responsive Design */
 @media (max-width: 900px) {
     .project-card-wrapper {
-        flex: 1 1 45%; /* Two cards per row on medium screens */
+        flex: 1 1 45%; /* Two cards per row */
         max-width: 45%;
     }
 }
 
 @media (max-width: 600px) {
     .project-card-wrapper {
-        flex: 1 1 100%; /* Stack cards on small screens */
+        flex: 1 1 100%; /* Stack cards vertically */
         max-width: 100%;
     }
 }
