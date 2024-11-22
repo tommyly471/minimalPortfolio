@@ -1,37 +1,49 @@
 .project-detail {
     max-width: 800px;
     margin: 0 auto;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Matches your modern style preference */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for readability */
+    border-radius: 8px; /* Slightly rounded corners for a modern look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .project-detail h1 {
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 2.25em;
+    color: #222; /* Slightly darker for better contrast */
+    margin-bottom: 15px;
     text-align: center;
+    font-weight: 600; /* Bold title */
 }
 
 .project-detail-image {
     width: 100%;
-    height: 400px; /* Adjust height as needed */
+    max-height: 400px; /* Limit height to maintain proportions */
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 8px; /* Matches container's rounded edges */
     margin-bottom: 20px;
 }
 
 .project-description h3 {
-    font-size: 1.5em;
-    color: #0073e6;
-    margin-top: 20px;
+    font-size: 1.6em;
+    color: #0056b3; /* Slightly darker blue for better contrast */
+    margin-top: 25px;
+    font-weight: 500;
 }
 
-.project-description p, .project-description ul {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #555;
+.project-description p,
+.project-description ul {
+    font-size: 1.05em;
+    line-height: 1.8; /* Increased for better readability */
+    color: #444; /* Neutral dark gray for text */
 }
 
 .project-description ul {
     list-style-type: disc;
-    margin-left: 20px;
+    margin-left: 25px; /* Slightly larger indentation */
+    padding-left: 10px;
+}
+
+.project-description ul li {
+    margin-bottom: 10px; /* Spacing between list items */
 }
