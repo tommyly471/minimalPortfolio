@@ -17,7 +17,7 @@ body {
 .container {
     max-width: 2000px; /* Limit the width for consistent alignment */
     margin: 0 auto;
-    padding: 0 20px; /* Optional padding for spacing */
+    padding: 0; /* Optional padding for spacing */
 }
 
 /* Header and nav styling */
@@ -25,7 +25,7 @@ header {
     width: 100%;
     background: #fff;
     padding: 15px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
 }
 
 nav ul {
@@ -35,12 +35,12 @@ nav ul {
     width: 100%;
     justify-content: flex-start; /* Ensures equal spacing between items */
     padding-left: 0; /* Remove default padding */
-    margin-left: -10px;
+    margin-left: 12px;
 }
 
 nav ul li {
     flex: 1;
-    text-align: center;
+    text-align: left;
 }
 
 nav ul li a {
@@ -56,14 +56,13 @@ nav ul li a {
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
-    border-top: 1px solid #ddd;
-    gap: 15px; /* Adds space between sections */
+    gap: 15px;
 }
 
 .top-sections section {
     flex: 1;
     min-width: 250px;
-    padding: 10px 15px; /* Padding to help with responsive alignment */
+    padding: 10px 15px;
 }
 
 .top-sections h2 {
