@@ -8,8 +8,8 @@
 /* Basic styling */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #ffffff;
-    color: #333;
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
     scroll-behavior: smooth;
 }
 
@@ -23,7 +23,7 @@ body {
 /* Header and nav styling */
 header {
     width: 100%;
-    background: #fff;
+    background: #000000; /* Match body background */
     padding: 15px 0;
     box-shadow: none;
 }
@@ -45,7 +45,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff; /* White text for links */
     font-weight: bold;
     font-size: 1.2em;
     white-space: nowrap;
@@ -69,20 +69,22 @@ nav ul li a {
     font-size: 1.2em;
     margin-bottom: 10px;
     text-align: left;
+    color: #808080; /* Gray color for titles */
 }
 
 .top-sections p {
     font-size: 0.9em;
     line-height: 1.4;
-    color: #555;
+    color: #dddddd; /* Slightly lighter text for paragraph contrast */
 }
 
 /* Footer styling */
 footer {
-    background-color: #f8f8f8;
+    background-color: #111111; /* Darker footer background */
     padding: 20px 0;
     text-align: center;
     margin-top: 40px;
+    color: #ffffff; /* White text for footer */
 }
 
 /* Responsive styling */
@@ -110,13 +112,14 @@ footer {
 /* Ensure projects align with other sections */
 .projects {
     padding: 20px 0;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #333333; /* Subtle border for separation */
 }
 
 .projects h2 {
     text-align: left;
     margin-bottom: 15px;
     font-size: 1.5em;
+    color: #808080; /* Gray color for project titles */
 }
 
 .project-container {
