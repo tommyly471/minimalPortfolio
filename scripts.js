@@ -1,29 +1,30 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const modal = document.getElementById('modal');
-    const iframe = document.querySelector('.modal-iframe');
-    const closeBtn = document.querySelector('.close-btn');
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("modal");
+    const modalIframe = document.querySelector(".modal-iframe");
+    const closeModalBtn = document.querySelector(".close-btn");
+    const projectCards = document.querySelectorAll(".project-card");
 
-    // Add click event to project links
-    document.querySelectorAll('.project-card').forEach(link => {
-        link.addEventListener('click', (e) => {
+    // Open modal and load project detail
+    projectCards.forEach(card => {
+        card.addEventListener("click", (e) => {
             e.preventDefault();
-            const href = link.getAttribute('href');
-            iframe.src = href; // Set iframe source to the link's href
-            modal.style.display = 'flex'; // Show the modal
+            const projectUrl = card.getAttribute("data-project");
+            modalIframe.src = projectUrl;
+            modal.style.display = "block";
         });
     });
 
-    // Close modal on close button click
-    closeBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-        iframe.src = ''; // Clear iframe source
+    // Close modal
+    closeModalBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+        modalIframe.src = ""; // Clear iframe content
     });
 
-    // Close modal on clicking outside modal content
-    window.addEventListener('click', (e) => {
+    // Close modal when clicking outside the content
+    window.addEventListener("click", (e) => {
         if (e.target === modal) {
-            modal.style.display = 'none';
-            iframe.src = ''; // Clear iframe source
+            modal.style.display = "none";
+            modalIframe.src = ""; // Clear iframe content
         }
     });
 });
