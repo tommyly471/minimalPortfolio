@@ -1,30 +1,39 @@
 document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("modal");
-    const modalIframe = document.querySelector(".modal-iframe");
-    const closeModalBtn = document.querySelector(".close-btn");
+    const modalIframe = modal.querySelector(".modal-iframe");
+    const closeModalBtn = modal.querySelector(".close-btn");
     const projectCards = document.querySelectorAll(".project-card");
 
-    // Open modal and load project detail
+    // Utility function to open the modal
+    function openModal(projectUrl) {
+        modalIframe.src = projectUrl;
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+    }
+
+    // Utility function to close the modal
+    function closeModal() {
+        modal.style.display = "none";
+        modalIframe.src = "";
+        document.body.style.overflow = "";
+    }
+
+    // Add click event listeners to project cards
     projectCards.forEach(card => {
         card.addEventListener("click", (e) => {
             e.preventDefault();
-            const projectUrl = card.getAttribute("data-project");
-            modalIframe.src = projectUrl;
-            modal.style.display = "block";
+            const projectUrl = card.dataset.project; 
+            openModal(projectUrl);
         });
     });
 
-    // Close modal
-    closeModalBtn.addEventListener("click", () => {
-        modal.style.display = "none";
-        modalIframe.src = ""; // Clear iframe content
-    });
+    // Close modal when the close button is clicked
+    closeModalBtn.addEventListener("click", closeModal);
 
     // Close modal when clicking outside the content
-    window.addEventListener("click", (e) => {
+    modal.addEventListener("click", (e) => {
         if (e.target === modal) {
-            modal.style.display = "none";
-            modalIframe.src = ""; // Clear iframe content
+            closeModal();
         }
     });
 });

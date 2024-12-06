@@ -153,16 +153,14 @@ footer {
 
 /* Modal container */
 .modal {
-    display: none;
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1000;
-    justify-content: center;
-    align-items: center;
 }
 
 /* Modal content */
@@ -170,9 +168,9 @@ footer {
     background: #fff;
     padding: 20px;
     position: relative;
-    width: 80%;
+    width: 100%;
     max-width: 800px;
-    height: 80%;
+    height: 200%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     display: flex;
