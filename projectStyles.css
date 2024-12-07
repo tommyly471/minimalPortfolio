@@ -1,32 +1,34 @@
 .project-detail {
     max-width: 800px;
     margin: 0 auto;
-    font-family: 'Roboto', sans-serif; /* Matches your modern style preference */
+    font-family: 'Roboto', sans-serif; /* Consistent modern style */
     padding: 20px;
-    background-color: #f9f9f9; /* Light background for readability */
-    border-radius: 8px; /* Slightly rounded corners for a modern look */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #111111; /* Matches the dark theme background */
+    border-radius: 8px; /* Consistent rounded corners */
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Subtle shadow for depth */
+    color: #ffffff; /* White text for contrast against dark background */
 }
 
 .project-detail h1 {
     font-size: 2.25em;
-    color: #222; /* Slightly darker for better contrast */
+    color: #ffffff; /* White title for contrast */
     margin-bottom: 15px;
     text-align: center;
-    font-weight: 600; /* Bold title */
+    font-weight: 600; /* Bold title for emphasis */
 }
 
 .project-detail-image {
     width: 100%;
-    max-height: 400px; /* Limit height to maintain proportions */
+    max-height: 400px; /* Maintain proportions */
     object-fit: cover;
     border-radius: 8px; /* Matches container's rounded edges */
     margin-bottom: 20px;
+    border: 1px solid #333333; /* Subtle border for definition */
 }
 
 .project-description h3 {
     font-size: 1.6em;
-    color: #0056b3; /* Slightly darker blue for better contrast */
+    color: #808080; /* Gray for section headings */
     margin-top: 25px;
     font-weight: 500;
 }
@@ -34,16 +36,16 @@
 .project-description p,
 .project-description ul {
     font-size: 1.05em;
-    line-height: 1.8; /* Increased for better readability */
-    color: #444; /* Neutral dark gray for text */
+    line-height: 1.8; /* Better readability */
+    color: #dddddd; /* Lighter gray for paragraph text */
 }
 
 .project-description ul {
     list-style-type: disc;
-    margin-left: 25px; /* Slightly larger indentation */
+    margin-left: 25px; /* Indentation for clarity */
     padding-left: 10px;
 }
 
 .project-description ul li {
-    margin-bottom: 10px; /* Spacing between list items */
+    margin-bottom: 10px; /* Space between list items */
 }
